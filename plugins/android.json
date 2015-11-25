@@ -1,0 +1,29 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "phonegap-facebook-plugin": {
+            "APP_ID": "997419816966940",
+            "APP_NAME": "chessfamily",
+            "PACKAGE_NAME": "com.cp.chess"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.cp.chess"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.cp.chess"
+        }
+    },
+    "dependent_plugins": {}
+}
