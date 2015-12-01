@@ -5,7 +5,7 @@ $url = "http://chessfamily.net/api/query";
 $data = array(
   'authentication' => 'chessfemily',
   'action' => 'event_get',
-  'event_id' => 4,
+  'event_id' => 1,
 );
 
 foreach($data as $key=>$value) { $content .= $key.'='.$value.'&'; }
