@@ -37,7 +37,7 @@
          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
          <![endif]-->
     </head>
-     <body style="padding-bottom:0px;padding-top:0px;">
+     <body style="padding-bottom:0px;padding-top:0px;" onload="test_mobile()">
         <div class="container">
             <div class="row">
             <div class="col-md-12 bloc_logo">
@@ -52,6 +52,7 @@
                       <div class="inscritok" style="display:none;text-align:center;font-weight:bold;color:red;">inscription ok</div>
                       <div class="info_requis" style="display:none;text-align:center;font-weight:bold;color:red;">verif info</div>
                        <form  id="member_add" action="#">
+                            <input type="text" id="detext_os">
                             <div class="input-group">
                               <span class="input-group-addon">@</span>
                               
@@ -104,5 +105,6 @@
     
         <script src="js/jquery-2.1.1.min.js"></script>
         <script src="scripts/MemberScript/MemberAdd.js"></script>
+        <script type="text/javascript" src="js/os.js"></script>
   </body>
 </html>

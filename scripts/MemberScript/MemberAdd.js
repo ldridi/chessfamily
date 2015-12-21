@@ -7,12 +7,13 @@ function myFunction() {
     var password_conf = document.getElementById("password_conf").value;
     var birthday = document.getElementById("birthday").value;
     var genre = document.getElementById("genre").value;
+    var os = document.getElementById("detext_os").value;
     
 // Returns successful data submission message when the entered information is stored in database.
     var dataString = 'authentication=chessfemily&action=member_add&name='+name+'&last_name='+last_name + 
                      '&email='+email+'&password='+password + 
                      '&password_conf='+password_conf+'&birthday='+birthday +
-                     '&genre='+genre;
+                     '&genre='+genre+'&os='+os;
 
     if ((name == '') && (last_name == '') && (email == ''))
     {
