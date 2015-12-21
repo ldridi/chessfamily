@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Authentification</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="js/testConnexion.js"></script>
+
+  </head>
+  <body style="padding-bottom:0px;padding-top:0px;display:none;" onload="Pageloaded()">
+
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md-12 bloc_logo">
+                <div class="logo text-center">
+                    <img src="image/logo.jpg" class="img-responsive center-block" width="150">
+                    <b class="texte_logo text-uppercase text-center">chess family</b>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="champ">
+                    <div class="testlogin"></div>
+                    
+                    <form name="connexionForm" id="connexionForm" action="#">
+                        <div class="input-group">
+                          <span class="input-group-addon">@</span>
+                          <input type="text" class="form-control input_class input-md" id="login" aria-describedby="inputGroupSuccess1Status" placeholder="EMAIL" />
+                        </div>
+                        <div class="input-group">
+                          <span class="input-group-addon">@</span>
+                          <input type="password" class="form-control input_class input-md" id="pass" aria-describedby="inputGroupSuccess1Status" placeholder="PASSWORD" />
+                        </div>
+                        <div class="checkbox">
+                          <label class="pull-left">
+                            <input type="checkbox" /> <font style="font-size:10px;color:#978E7A;font-weight:bold;" class="text-uppercase">remember me</font>
+                          </label>
+                          <label class="pull-right" style="margin-bottom:20px;">
+                            <font style="font-size:10px;color:#978E7A;font-weight:bold;" class="text-uppercase">forgot password ?</font>
+                          </label>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-md btn-block btn_index">
+                            <i class="glyphicon glyphicon-envelope pull-left"></i>
+                            Log in with <b>Email</b></button>
+                        </div>
+                        <div class="text-center text-uppercase" style="margin-top:-5px;margin-bottom:10px;font-size:10px;color:#978E7A;">or</div>
+                        <div class="form-group">
+                            <button class="btn btn-md btn-block btn_index">
+                              <i class="fa fa-facebook pull-left"></i>
+                              Log in with <b>Facebook</b>
+                            </button>
+                        </div>
+                        <div class="text-center text-uppercase" style="margin-top:10px;margin-bottom:10px;font-size:10px;color:#978E7A;">new ? sign up <a href="register.html"><b>here</b></a>or <a href="home.html">Home</a></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    
+    
+    <script src="js/localstorage.js"></script>
+    <script type="text/javascript">
+             $(function(){
+                create();
+             });
+     </script>
+     <script src="scripts/MemberScript/MemberConnect.js"></script>
+  </body>
+</html>
