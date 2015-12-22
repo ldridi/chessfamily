@@ -32,7 +32,7 @@
                           //console.log('ok');
                           //console.log(result.member.id);
                       }else{
-                          $('.testlogin').html("<center><b><font color='red'>Veuillez verifier votre login/mot de passe</font></b></center></br>");
+                          $('.testlogin').html("<center><b><font color='red'>Veuillez vérifier votre login/mot de passe</font></b></center></br>");
                          // console.log('non');
                       }
                       
