@@ -13,7 +13,7 @@ function myFunction() {
     var dataString = 'authentication=chessfemily&action=member_add&name='+name+'&last_name='+last_name + 
                      '&email='+email+'&password='+password + 
                      '&password_conf='+password_conf+'&birthday='+birthday +
-                     '&genre='+genre+'&os='+os;
+                     '&gender='+genre+'&os='+os;
 
     if ((name == '') && (last_name == '') && (email == ''))
     {
@@ -32,14 +32,7 @@ function myFunction() {
           jsonpCallback: 'member_add',
           url: HOST + "MemberWebService/memberAdd.php",
           success:function(result){
-                  if(result.success == 1){
-                      //$('.testlogin').html(' success connexion');
-                      $('.info_requis').fadeOut();
-                      $('.inscritok').fadeIn();
-                      $('.inscritok').fadeOut(4000);
-                  }else{
-                      $('.info_requis').fadeIn();
-                  }
+                  console.log(result);
 
                   
           }
