@@ -8,6 +8,7 @@ function myFunction() {
     var birthday = document.getElementById("birthday").value;
     var genre = document.getElementById("genre").value;
 <<<<<<< HEAD
+<<<<<<< HEAD
     var os = document.getElementById("detect_os").value;
 	var device_token = document.getElementById("detect_UUID").value;
     
@@ -50,6 +51,10 @@ function myFunction() {
 				}
 			});
 	}
+=======
+    var os = document.getElementById("detext_os").value;
+    
+>>>>>>> fe4d97e5d60224cf58c3c11e5b6449ecc5982cc9
 =======
     var os = document.getElementById("detext_os").value;
     
