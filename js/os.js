@@ -1,18 +1,18 @@
-function test_mobile() {
+function testMobileOS() {
   var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
   if( userAgent.match( /iPad/i ) || userAgent.match( /iPhone/i ) || userAgent.match( /iPod/i ) )
   {
-    $('#detext_os').val("IOS");
+    $('#detect_os').val("IOS");
 
   }
   else if( userAgent.match( /Android/i ) )
   {
 
-    $('#detext_os').val("Android");
+    $('#detect_os').val("Android");
   }
   else
   {
-    $('#detext_os').val("autres");
+    $('#detect_os').val("Autres");
   }
 }

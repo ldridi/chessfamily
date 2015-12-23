@@ -7,7 +7,7 @@ function myFunction() {
     var password_conf = document.getElementById("password_conf").value;
     var birthday = document.getElementById("birthday").value;
     var genre = document.getElementById("genre").value;
-    var os = document.getElementById("detext_os").value;
+    var os = document.getElementById("detect_os").value;
     
 // Returns successful data submission message when the entered information is stored in database.
     var dataString = 'authentication=chessfemily&action=member_add&name='+name+'&last_name='+last_name + 
