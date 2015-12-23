@@ -1,5 +1,5 @@
 function myFunction() {
-    
+    var urlWS = "http://api.chessfamily.net/api/query";
     var name = document.getElementById("name").value;
     var last_name = document.getElementById("last_name").value;
     var email = document.getElementById("email").value;
@@ -9,8 +9,46 @@ function myFunction() {
     var genre = document.getElementById("genre").value;
     var os = document.getElementById("detect_os").value;
     
+	if ((name == '') && (last_name == '') && (email == ''))
+    {
+        $('.info_requis').fadeIn();
+    }
+    else
+    {
+		$.ajax({
+	
+				type:"POST",
+				url:urlWS,
+				data:{authentication:"chessfemily",
+					action:"member_add",
+					name:name,
+					last_name:last_name,
+					email:email,
+					password:password, 
+					password_conf:password_conf,
+					birthday:birthday,
+					genre:genre,
+					os:os},
+				dataType:"json",
+				success:function(data){
+					if(data.success == 1){
+						  //$('.testlogin').html(' success connexion');
+						  $('.info_requis').fadeOut();
+						  $('.inscritok').fadeIn();
+						  $('.inscritok').fadeOut(4000);
+					  }else{
+						  $('.info_requis').fadeIn();
+					  }
+					
+				},
+				error:function()
+				{
+					alert('error');
+				}
+			});
+	}
 // Returns successful data submission message when the entered information is stored in database.
-    var dataString = 'authentication=chessfemily&action=member_add&name='+name+'&last_name='+last_name + 
+    /*var dataString = 'authentication=chessfemily&action=member_add&name='+name+'&last_name='+last_name + 
                      '&email='+email+'&password='+password + 
                      '&password_conf='+password_conf+'&birthday='+birthday +
                      '&genre='+genre+'&os='+os;
@@ -45,6 +83,6 @@ function myFunction() {
           }
         });
         
-    }
+    }*/
     return false;
 }
