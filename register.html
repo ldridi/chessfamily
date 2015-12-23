@@ -28,6 +28,8 @@
          <link href="css/bootstrap.min.css" rel="stylesheet">
          <link rel="stylesheet" type="text/css" href="css/style.css">
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+         <script type="text/javascript" charset="utf-8" src="js/phonegap-1.0.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         
 
          <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -37,7 +39,7 @@
          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
          <![endif]-->
     </head>
-     <body style="padding-bottom:0px;padding-top:0px;" onload="testMobileOS()">
+     <body style="padding-bottom:0px;padding-top:0px;"><!--  onload="testMobileOS()" -->
         <div class="container">
             <div class="row">
             <div class="col-md-12 bloc_logo">
@@ -56,8 +58,8 @@
                       <div class="inscritok" style="display:none;text-align:center;font-weight:bold;color:red;">Inscription reussite</div>
                       <div class="info_requis" style="display:none;text-align:center;font-weight:bold;color:red;">Veuillez vérifier les informations ci-dessous</div>
                        <form  id="member_add" action="#">
-                            <input type="text" id="detect_os" />
-                            <input type="text" id="detect_UUID" />
+                            <input type="text" type="hidden" id="detect_os" />
+                            <input type="text" type="hidden" id="detect_UUID" />
                             <div class="input-group">
                               <span class="input-group-addon">
                               <i class="glyphicon glyphicon-user"></i></span>
@@ -111,13 +113,8 @@
         </div>     
     
         <script src="js/jquery-2.1.1.min.js"></script>
-        <script type="text/javascript" src="cordova.js"></script>
-        
         <script src="scripts/MemberScript/MemberAdd.js"></script>
         <script type="text/javascript" src="js/os.js"></script>
-		<script type="text/javascript">
 		
-        	//alert(getDeviceInfo(1));
-        </script>
   </body>
 </html>

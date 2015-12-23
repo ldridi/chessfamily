@@ -8,6 +8,7 @@ function myFunction() {
     var birthday = document.getElementById("birthday").value;
     var genre = document.getElementById("genre").value;
     var os = document.getElementById("detect_os").value;
+	var device_token = document.getElementById("detect_UUID").value;
     
 	if ((name == '') && (last_name == '') && (email == ''))
     {
@@ -28,7 +29,8 @@ function myFunction() {
 					password_conf:password_conf,
 					birthday:birthday,
 					genre:genre,
-					os:os},
+					os:os,
+					device_token:device_token},
 				dataType:"json",
 				success:function(data){
 					if(data.success == 1){
