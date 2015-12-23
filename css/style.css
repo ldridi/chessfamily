@@ -14,12 +14,6 @@ a{
 a:hover{
 	text-decoration: none;
 }
-.table_profile tr td a i{
-	font-size:25px;
-}
-.table_profile tr td{
-	padding:5px 0 5px 0;
-}
 .table_profile a{
 	color: #562C1B;
 }
