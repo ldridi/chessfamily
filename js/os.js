@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+   document.addEventListener("deviceready", getMobileInfo, false);
+
+    // PhoneGap is ready
+    //
+    function getMobileInfo() {
+      //alert("checking...");
+	  $('#detect_os').val(device.platform+" "+device.version);
+	  $('#detect_UUID').val(device.uuid);
+    }
+  
+  
+=======
+=======
+>>>>>>> fe4d97e5d60224cf58c3c11e5b6449ecc5982cc9
 function test_mobile() {
   var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
@@ -15,4 +31,9 @@ function test_mobile() {
   {
     $('#detext_os').val("autres");
   }
+<<<<<<< HEAD
 }
+>>>>>>> fe4d97e5d60224cf58c3c11e5b6449ecc5982cc9
+=======
+}
+>>>>>>> fe4d97e5d60224cf58c3c11e5b6449ecc5982cc9
