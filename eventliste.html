@@ -46,14 +46,27 @@
                       </ul>
                       <div class="tab-content" style="padding-top:20px;padding-bottom:20px;">
                         <div role="tabpanel" class="tab-pane active" id="recherche_players">
-                           
+                           <input type="text" id="getlat" style="color:black;">
+                           <input type="text" id="getlong" style="color:black;">
                             <table>
                                 <tr>             
                                   <th class="table_distance"><h5><b style="color:#582D1C;font-size:10px;">Distance :</h5></th>
-                                  <td class="table_distance"><input type="radio" name="distance" /><font style="color:black;"> -1km </font></td>
-                                  <td class="table_distance"><input type="radio" name="distance" checked="" /><font style="color:black;"> -5km</font></td>
-                                  <td class="table_distance"> <input type="radio" name="distance" /><font style="color:black;"> -10km</font></td>
-                                  <td><input type="radio" name="distance" /><font style="color:black;"> -15km </font></td>
+                                  <td class="table_distance">
+                                      <input type="radio" name="distance" value="1" onclick="testcheck()" />
+                                      <font style="color:black;"> -1km </font>
+                                  </td>
+                                  <td class="table_distance">
+                                      <input type="radio" name="distance" value="5" onclick="testcheck()"/>
+                                      <font style="color:black;"> -5km</font>
+                                  </td>
+                                  <td class="table_distance">
+                                      <input type="radio" name="distance" value="10" onclick="testcheck()"/>
+                                      <font style="color:black;"> -10km</font>
+                                  </td>
+                                  <td>
+                                      <input type="radio" name="distance" value="15"  onclick="testcheck()"/>
+                                      <font style="color:black;"> -15km </font>
+                                  </td>
                                 </tr>
                             </table>
                             <table>
@@ -135,10 +148,10 @@
                                   </td>
                               </tr>
                             </table>
-                            <button class="btn btn-sm center-block button_event"><b>SEARCH MEMBERS</b></button>
+                            <button class="btn btn-sm center-block button_event" onclick="memberFind()"><b>SEARCH MEMBERS</b></button>
                             
                         </div>
-                        <div role="tabpanel" class="tab-pane" id="recherche_events">
+                        <!-- <div role="tabpanel" class="tab-pane" id="recherche_events">
                           
                           <table>
                                 <tr>             
@@ -170,8 +183,8 @@
                             </table>
                             <button class="btn btn-sm center-block button_event"><b>SEARCH EVENTS</b></button>
 
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="recherche_place">
+                        </div> -->
+                        <!--<div role="tabpanel" class="tab-pane" id="recherche_place">
                           
                           <table>
                                 <tr>             
@@ -211,7 +224,7 @@
                             </table>
                             <button class="btn btn-sm center-block button_event"><b>SEARCH PLACE</b></button>
 
-                        </div>
+                        </div>-->
                       </div>
                     </div>
                 </div>
@@ -225,7 +238,7 @@
           <div class="col-xs-12">
             <div>
               <ul class="nav nav-tabs menu-ho" role="tablist" style="background:#F1D6A1;padding-top:15px;">
-                <li role="presentation" class="active text-center" style="width:33.33333333333333%"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="text-uppercase"><i class="fa fa-user" style="font-size:20px;"></i>&nbsp;&nbsp;Players</a></li>
+                <li role="presentation" class="active text-center" style="width:33.33333333333333%" ><a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="text-uppercase"><i class="fa fa-user" style="font-size:20px;" ></i>&nbsp;&nbsp;Players</a></li>
                 <li role="presentation" style="width:33.33333333333333%" class="text-center"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" class="text-uppercase"><i class="fa fa-trophy" style="font-size:20px;"></i>&nbsp;&nbsp;EVENTS</a></li>
                 <li role="presentation" style="width:33.33333333333333%"  class="text-center"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab" class="text-uppercase"><i class="fa fa-map-marker" style="font-size:20px;"></i>&nbsp;&nbsp;locations</a></li>
               </ul>
@@ -307,6 +320,7 @@
     
     <script type="text/javascript" src="scripts/MeetingScript/meetingPlaceFind.js"></script>
     <script type="text/javascript" src="scripts/MemberScript/MemberFind.js"></script>
+     <script type="text/javascript" src="scripts/MemberScript/MemberGetLocation.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
     function goBack() {
@@ -315,5 +329,17 @@
     </script>
     <script type="text/javascript" src="scripts/MemberScript/MemberSetlocation.js"></script>
     <script type="text/javascript" src="js/geo.js"></script>
+
+    <script type="text/javascript">
+        $('#p').click(function(){
+            alert('ok');
+        });
+    </script>
+    <script type="text/javascript">
+        function testcheck(){
+            alert($("input[name=distance]:checked").val());
+        }
+      
+    </script>
   </body>
 </html>
