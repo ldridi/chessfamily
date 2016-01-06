@@ -13,7 +13,8 @@
             var dataString = 'authentication=chessfemily&action=member_connect&email='+login+'&password='+pass;
 
 
-           var HOST = "http://epavia.com/proxy/";
+           ///* variable host declarer dans templateGenerator.js */
+		   var HOST = "http://www.epavia.com/proxy/";
             $.ajax({
               type: 'GET',
               contentType: "application/json",

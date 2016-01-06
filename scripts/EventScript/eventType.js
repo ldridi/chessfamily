@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var HOST = "http://epavia.com/proxy/";
+    //variable host declarer dans templateGenerator.js
     function eventType() {
         
         $.ajax({

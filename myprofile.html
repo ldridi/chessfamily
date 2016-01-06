@@ -24,11 +24,10 @@
          <meta charset="utf-8">
          <meta http-equiv="X-UA-Compatible" content="IE=edge">
          <meta name="viewport" content="width=device-width, initial-scale=1">
-         <title>Phonegap</title>
+         <title>My Profile - Edit</title>
          <link href="css/bootstrap.min.css" rel="stylesheet">
          <link rel="stylesheet" type="text/css" href="css/style.css">
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        
 
          <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
          <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -38,6 +37,7 @@
          <![endif]-->
     </head>
      <body>
+     <div id="header"></div>
         <div class="container">
             <div class="row">
             <div class="col-md-12 bloc_logo">
@@ -53,50 +53,53 @@
                       <div class="info_requis" style="display:none;text-align:center;font-weight:bold;color:red;">verif info</div>
                        <form  id="member_add" action="#">
                             <div class="input-group">
-                              <span class="input-group-addon">@</span>
+                              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span></span>
                               
-                              <input type="text" name="name" id="name" class="form-control input_class input-md" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status" placeholder="Name">
+                              <input type="text" name="name" id="name" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Name">
                             </div>
                             <div class="input-group">
-                              <span class="input-group-addon">@</span>
-                              <input type="text" name="last_name" id="last_name" class="form-control input_class input-md" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status" placeholder="Last Name">
+                              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span></span>
+                              <input type="text" name="last_name" id="last_name" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Last Name">
                             </div>
                            
                             <div class="input-group">
-                              <span class="input-group-addon">@</span>
-                              <input type="password" name="password" id="password" class="form-control input_class input-md" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status" placeholder="Password">
+                              <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                              <input type="password" name="password" id="password" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Password">
                             </div>
                             <div class="input-group">
-                              <span class="input-group-addon">@</span>
-                              <input type="password" name="password_conf" id="password_conf" class="form-control input_class input-md" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status" placeholder="Password (Confirmation)">
+                              <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i>></i></span>
+                              <input type="password" name="password_conf" id="password_conf" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Password (Confirmation)">
                             </div>
                             
                             <div class="input-group input_date">
-                              <span class="input-group-addon">@</span>
-                              <input  type="date" name="birthday" id="birthday" class="form-control input_class input-md" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status" placeholder="Birthday">
+                              <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                              <input  type="date" name="birthday" id="birthday" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Birthday">
 
                             </div>
-                            <div class="form-group">
+                            <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                               <select name="genre" id="genre" class="form-control select_bloc">
                                 <option value="1">Male</option>
                                 <option value="2">Female</option>
                             </select>
                             </div>
-                            <div class="form-group">
-                              <select name="country" id="country" class="form-control select_bloc">
+                            <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                            <select name="country" id="country" class="form-control select_bloc">
                                   
                               </select>
                             </div>
-                            <!--<div class="input-group">
-                              <span class="input-group-addon">@</span>
-                              <input type="file" name="picture" id="picture" class="form-control input_class input-md" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status" placeholder="Email" required="required">
-                              <button onclick="capturePhoto();" class="form-control input_class input-md" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">Capture Photo</button>
-                              <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);" class="form-control input_class input-md" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">From Photo
-                              Library</button><br>
-                              <img id="image" src="" style="display:none;width:100%;">
-                            </div>-->
+                            <div class="input-group">
+                              <span class="input-group-addon"><i class="glyphicon glyphicon-camera"></span>
+                              
+      <button onclick="capturePhoto();" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status">Capture Photo</button>
+      <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status">From Photo Library</button><br />
+      <img id="image" src="" style="display:none;width:100%;">
+      <input type="button" onClick="MemberSetPhoto()" value="Valider" />
+                              
+                            </div>
                             <div class="form-group">
-                               <input type="button" id="submit" onclick="myFunction()" value="Submit" class="btn btn-md btn-block btn_index"/></br>
+                               <input type="button" id="submit" onclick="MemberUpdateProfileFunction()" value="Submit" class="btn btn-md btn-block btn_index"/></br>
                                <center><a href="home.html">Home</a></center>
                             </div>
                             
@@ -105,10 +108,18 @@
                 </div>
             </div>
         </div>     
-    
-        <script src="js/jquery-2.1.1.min.js"></script>
-        <script src="scripts/MemberScript/MemberFormUpdate.js"></script>
-        <script src="scripts/CountryCityScript/CountryGetAll.js"></script>
-        <script src="scripts/MemberScript/MemberUpdateProfile.js"></script>
+    	<div id="footer" class="col-xs-12"></div>
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="cordova.js" charset="utf-8"></script>
+        <script type="text/javascript" src="js/phonegap-1.0.0.js" charset="utf-8"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/templateGenerator.js"></script>
+        
+        
+        <script type="text/javascript" src="scripts/MemberScript/MemberFormUpdate.js"></script>
+        <script type="text/javascript" src="scripts/CountryCityScript/CountryGetAll.js"></script>
+        <script type="text/javascript" src="scripts/MemberScript/MemberUpdateProfile.js"></script>
+        <script type="text/javascript" src="js/camera.js"></script>
+        <script type="text/javascript" src="scripts/MemberScript/MemberSetPhoto.js"  charset="utf-8"></script>
   </body>
 </html>

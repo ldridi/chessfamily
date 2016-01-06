@@ -162,10 +162,11 @@ body::-webkit-scrollbar-track {
 	background: rgba(0,0,0,0.6);
 	padding: 10px 40px 10px 20px; 
 	position: absolute;
-	width: 90%;
+	width: 100%;
 	bottom: 0;
 	color: white;
 	font-size: 20px;
+	z-index:999;
 }
 .input-group{
 	border: 2px solid #965A36;
@@ -255,3 +256,41 @@ input:-moz-placeholder { font-size: 10pt; color: #555; }
     display: -webkit-box;
     padding-right: 10px;
 }
+
+
+
+/* pour les slideshow d'images */
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+  
+  
+  

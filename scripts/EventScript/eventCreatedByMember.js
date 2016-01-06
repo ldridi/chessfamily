@@ -3,7 +3,7 @@ $(document).ready(function(){
     var id_utilisateur = sessionStorage.getItem("identifiant");
 
     var dataString = 'authentication=chessfemily&action=member_events&member_id='+id_utilisateur ;
-    var HOST = "http://epavia.com/proxy/";
+    //variable host declarer dans templateGenerator.js
     function eventCreatedByMember() {
         
         $.ajax({
@@ -30,7 +30,7 @@ $(document).ready(function(){
                             " <i class='fa fa-circle' style='font-size:15px;color:#98BF0A'></i>" +
                         "</b>" +
                         "<br>" +
-                        "<font style='font-size:12px;color:grey;'> "+ item.start_date + " &nbsp;&nbsp;8:00PM - " + item.end_date + " &nbsp;&nbsp;2:00AM</font>" +
+                        "<font style='font-size:12px;color:grey;'> "+ item.start_date + "   8:00PM - " + item.end_date + "   2:00AM</font>" +
                     "</li>";     
                 $('.list-menu-myevents').append(li);
                 

@@ -7,7 +7,7 @@
 
           var dataString = 'authentication=chessfemily&action=friend_add&id_utilisateur='+id_utilisateur+'&friend_id='+m_id;
 
-        var HOST = "http://epavia.com/proxy/";
+        //variable host declarer dans templateGenerator.js
         $.ajax({
           type: 'GET',
           contentType: "application/json",

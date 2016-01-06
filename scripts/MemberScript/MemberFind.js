@@ -4,11 +4,12 @@
         var latitude = document.getElementById("lat").value;
         var longitude = document.getElementById("long").value;
         var distance = $("input[name=distance]:checked").val();
+		var urlWS="http://api.chessfamily.net/api/query";
         $.ajax(
         {
 
             type:"POST",
-            url:"http://api.chessfamily.net/api/query",
+            url:urlWS,
             data:{authentication:"chessfemily",action:"find_members",distance:"1000",latitude:"36.8040542603",longitude:"10.1823110580"},
             dataType:"json",
             beforeSend: function(){

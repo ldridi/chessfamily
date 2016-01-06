@@ -1,10 +1,10 @@
 
 
-    function memberSetLocation() {
+    function memberSetLocation(Long,Lat) {
         
-        var HOST = "http://epavia.com/proxy/";
-        var latitude = document.getElementById("lat").value;
-        var longitude = document.getElementById("long").value;
+        /* variable host declarer dans templateGenerator.js */
+        var latitude = Long;//document.getElementById("lat").value;
+        var longitude = Lat;//document.getElementById("long").value;
         var member_id = sessionStorage.getItem("identifiant");
         var dataString = 'authentication=chessfemily&action=member_location_set&member_id='+member_id+'&latitude='+latitude+'&longitude='+longitude;
         $.ajax({

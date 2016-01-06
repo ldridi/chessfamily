@@ -1,10 +1,11 @@
 
         var id_utilisateur = sessionStorage.getItem("identifiant");
+		var urlWS = "http://api.chessfamily.net/api/query";
 $.ajax(
         {
 
             type:"POST",
-            url:"http://api.chessfamily.net/api/query",
+            url:urlWS,
             data:{authentication:"chessfemily",action:"member_location_get",member_id:id_utilisateur},
             dataType:"json",
             beforeSend: function(){

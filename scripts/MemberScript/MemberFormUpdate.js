@@ -6,7 +6,8 @@ $(document).ready(function(){
           var dataString = 'authentication=chessfemily&action=member_get&id_member='+id_utilisateur;
           /*var password = document.getElementById("password").value; 
           var password_conf = document.getElementById("password_conf").value;*/
-        var HOST = "http://epavia.com/proxy/";
+        //variable host declarer dans templateGenerator.js
+		var HOST = "http://www.epavia.com/proxy/";
         $.ajax({
           type: 'GET',
           contentType: "application/json",

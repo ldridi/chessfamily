@@ -1,29 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Phonegap</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    
-  </head>
-  <body style="background:#E9E9E9" onload="getLocation()">
-  <p id="demo" style="background:red;height:100px;margin-top:10px;display:none;">
-      <input type="text" id="lat"></br>
-      <input type="text" id="long">
-  </p>
-  <div class="container-full">
-  <nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-full">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -38,7 +13,7 @@
         <div class="container-full">
             <div class="row">
                 <div class="col-xs-12">
-                    <div>
+                    <div style="display:none;">
                       <ul class="nav nav-tabs menu-ho" role="tablist" style="border-bottom:0px;">
                         <li role="recherche" class="active text-center" style="width:33.33333333333333%"><a href="#recherche_players" aria-controls="recherche_players" role="tab" data-toggle="tab"><i class="fa fa-user"></i>&nbsp;recherche_players</a></li>
                         <li role="recherche" class="text-center" style="width:33.33333333333333%"><a href="#recherche_events" aria-controls="recherche_events" role="tab" class="text-center" data-toggle="tab"><i class="fa fa-trophy"></i>&nbsp;recherche_events</a></li>
@@ -234,112 +209,3 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-      <div class="row">
-          <div class="col-xs-12">
-            <div>
-              <ul class="nav nav-tabs menu-ho" role="tablist" style="background:#F1D6A1;padding-top:15px;">
-                <li role="presentation" class="active text-center" style="width:33.33333333333333%" ><a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="text-uppercase"><i class="fa fa-user" style="font-size:20px;" ></i>&nbsp;&nbsp;Players</a></li>
-                <li role="presentation" style="width:33.33333333333333%" class="text-center"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" class="text-uppercase"><i class="fa fa-trophy" style="font-size:20px;"></i>&nbsp;&nbsp;EVENTS</a></li>
-                <li role="presentation" style="width:33.33333333333333%"  class="text-center"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab" class="text-uppercase"><i class="fa fa-map-marker" style="font-size:20px;"></i>&nbsp;&nbsp;locations</a></li>
-              </ul>
-              <div class="tab-content" style="padding-left:5px;padding-right:5px;">
-                <div role="tabpanel" class="tab-pane active" id="home">
-                    <div class="row">
-                        <div class="col-xs-12" style="padding-top:15px;padding-bottom:15px;padding-left:30px;">
-                        <font style="font-size:18px;color:grey;">RESULTS </font>
-                    </div>
-                    <div class="col-xs-12">
-                        <div class="row">
-                          <div class="players">
-                              <div class="col-xs-12">
-                                <img src="image/load.gif" style="display:none;margin-top:30%;" class="load_players center-block">
-                              </div>
-                          </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="profile">
-                  <div class="row">
-                        <div class="col-xs-12" style="padding-top:15px;padding-bottom:15px;padding-left:30px;">
-                        <font style="font-size:18px;color:grey;">FAVORITE/result</font>
-                    </div>
-                    <div class="col-xs-12">
-                        <img src="image/load.gif" style="display:none;margin-top:30%;" class="load_events center-block">
-                    </div>
-                    <div class="col-xs-12">
-                        <ul class="list-group list-menu-events">
-                            
-                        </ul>
-                    </div>
-                  </div>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="messages">
-                  <div class="row">
-                        <div class="col-xs-12" style="padding-top:15px;padding-bottom:15px;padding-left:30px;">
-                        <font style="font-size:18px;color:grey;">FAVORITE/result</font>
-                    </div>
-                    <div class="col-xs-12">
-                        <img src="image/load.gif" style="display:none;margin-top:30%;" class="load_location center-block">
-                    </div>
-                    <div class="col-xs-12">
-                        <ul class="list-group list-menu-location">
-                          
-                        </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-12">
-            <div class="barre_bottom navbar-fixed-bottom">
-              <ul class="nav nav-tabs" role="tablist1" style="background:#582D1C;padding-top:15px;">
-                <li style="width:25%"><a href="#" class="text-uppercase text-center"><i class="fa fa-home" style="font-size:30px;color:white;"></i></a></li>
-                <li style="width:25%"><a href="#" class="text-uppercase text-center"><i class="fa fa-list" style="font-size:30px;color:white;"></i></a></li>
-                <li style="width:25%"><a href="#" class="text-uppercase text-center"><i class="fa fa-envelope" style="font-size:30px;color:white;"></i><span class="badge" style="position:absolute;border-radius:50%;top:-1px;left:55px;background-color:red;">4</span></a></li>
-                <li role="presentation" class="text-center" style="width:25%">
-                  <button class="btn text-uppercase" id="set_location" onclick="memberSetLocation()">
-                      
-                      <div class="icones_ko_fav"><i class='glyphicon glyphicon-map-marker' style='font-size:20px;'></i></div>
-                      <font class="text-uppercase"><b style="font-size:10px;">favorite</b></font>
-                  </button>
-                </li>
-
-              </ul>
-            </div>
-          </div>
-          
-      </div>
-  </div>
-
-
-    <script src="js/jquery-2.1.1.min.js"></script>
-
-    <script type="text/javascript" src="scripts/EventScript/eventFavorite.js"></script>
-    
-    <script type="text/javascript" src="scripts/MeetingScript/meetingPlaceFind.js"></script>
-    <script type="text/javascript" src="scripts/MemberScript/MemberFind.js"></script>
-     <script type="text/javascript" src="scripts/MemberScript/MemberGetLocation.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script>
-    function goBack() {
-        window.history.back();
-    }
-    </script>
-    <script type="text/javascript" src="scripts/MemberScript/MemberSetlocation.js"></script>
-    <script type="text/javascript" src="js/geo.js"></script>
-
-    <script type="text/javascript">
-        $('#p').click(function(){
-            alert('ok');
-        });
-    </script>
-    <script type="text/javascript">
-        function testcheck(){
-            alert($("input[name=distance]:checked").val());
-        }
-      
-    </script>
-  </body>
-</html>

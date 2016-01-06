@@ -22,7 +22,7 @@ function editMeetingPlace() {
                      '&type_id='+meetingType +
                      '&status='+status_meeting;
     
-        var HOST = "http://epavia.com/proxy/";
+        //variable host declarer dans templateGenerator.js
         $.ajax({
           type: 'GET',
           contentType: "application/json",

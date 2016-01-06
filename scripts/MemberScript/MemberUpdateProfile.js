@@ -1,4 +1,4 @@
-function myFunction() {
+function MemberUpdateProfileFunction() {
     
     var name = document.getElementById("name").value;
     var last_name = document.getElementById("last_name").value;
@@ -9,6 +9,7 @@ function myFunction() {
     var genre = document.getElementById("genre").value;
     var country = document.getElementById("country").value;
     var id_utilisateur = sessionStorage.getItem("identifiant");
+
 // Returns successful data submission message when the entered information is stored in database.
     if(password == ''){
         var dataString = 'authentication=chessfemily&action=member_edit&name='+name+
@@ -31,7 +32,7 @@ function myFunction() {
     
 
 
-        var HOST = "http://epavia.com/proxy/";
+        //variable host declarer dans templateGenerator.js
         $.ajax({
           type: 'GET',
           contentType: "application/json",

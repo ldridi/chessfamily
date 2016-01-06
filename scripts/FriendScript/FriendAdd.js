@@ -1,4 +1,4 @@
-function myFunction() {
+function AddFriends() {
     
     var password = document.getElementById("password").value;
     

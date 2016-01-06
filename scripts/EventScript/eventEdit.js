@@ -32,7 +32,7 @@ function editEvent() {
                      '&website='+website;
 
     
-        var HOST = "http://epavia.com/proxy/";
+        //variable host declarer dans templateGenerator.js
         $.ajax({
           type: 'GET',
           contentType: "application/json",

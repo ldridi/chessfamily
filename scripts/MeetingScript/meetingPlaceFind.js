@@ -1,6 +1,6 @@
 $(document).ready(function(){
     function meetingPlaceFind() {
-        var HOST = "http://epavia.com/proxy/";
+        //variable host declarer dans templateGenerator.js
         $.ajax({
           type: 'GET',
           contentType: "application/json",
@@ -17,7 +17,7 @@ $(document).ready(function(){
                 var li = "<li class='list-group-item'>" +
                 "<span class='badge' style='background:white;color:grey;margin-top:5px;'>"+
                 "<font style='font-size:20px;'> " + item.type + 
-                "</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='fa fa-trash delete' id='" + item.id +"' style='font-size:25px;color:#4B2618;'></i></span><b class='location' id='" + item.id +"'> " + item.name + 
+                "</font>      <i class='fa fa-trash delete' id='" + item.id +"' style='font-size:25px;color:#4B2618;'></i></span><b class='location' id='" + item.id +"'> " + item.name + 
                 " <i class='fa fa-circle' style='font-size:15px;color:#98BF0A'></i></b><br><font style='font-size:12px;color:grey;'> " + item.distance +
                 " KM</font></li>";
                 $('.list-menu-location').append(li);

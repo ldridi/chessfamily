@@ -31,8 +31,8 @@ function AddEvent() {
                      '&email='+email +
                      '&website='+website;
 
-    
-        var HOST = "http://epavia.com/proxy/";
+    	var HOST = "http://www.epavia.com/proxy/";
+        //variable host declarer dans templateGenerator.js
         $.ajax({
           type: 'GET',
           contentType: "application/json",
